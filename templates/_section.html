@@ -1,0 +1,24 @@
+<% if (!_.isString(slide) && !_.isArray(slide) && _.isObject(slide)) { %>
+    <section
+      <%= _.map(slide.attr, function (val, attr) {return attr + '="' + val + '"'}).join(' ')%>
+      <% if (_.isString(slide.filename)) { %>
+        <% if (slide.filename.indexOf('.html') !== -1) { %>
+            data-html="slides/<%= slide.filename %>"
+        <% } else { %>
+          data-markdown="slides/<%= slide.filename %>"
+        <% }%>
+      <% } %>
+    >
+    </section>
+<% } %>
+
+<% if (_.isString(slide)) { %>
+    <section
+      <% if (slide.indexOf('.html') !== -1) { %>
+          data-html="slides/<%= slide %>"
+      <% } else { %>
+          data-markdown="slides/<%= slide %>"
+      <% }%>
+    >
+    </section>
+<% } %>
