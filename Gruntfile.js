@@ -13,10 +13,6 @@ module.exports = function(grunt) {
         files: ['templates/_index.html', 'templates/_section.html', 'slides/list.json'],
         tasks: ['buildIndex']
       },
-      coffeelint: {
-        files: ['Gruntfile.coffee'],
-        tasks: ['coffeelint']
-      },
       jshint: {
         files: ['js/*.js'],
         tasks: ['jshint']
@@ -113,7 +109,7 @@ module.exports = function(grunt) {
     });
     return grunt.file.write('index.html', html);
   });
-  grunt.registerTask('test', '*Lint* javascript and coffee files.', ['coffeelint', 'jshint']);
+  grunt.registerTask('test', '*Lint* javascript and coffee files.', ['jshint']);
   grunt.registerTask('serve', 'Run presentation locally and start watch process (living document).', ['buildIndex', 'sass', 'connect:livereload', 'watch']);
   grunt.registerTask('dist', 'Save presentation files to *dist* directory.', ['test', 'sass', 'buildIndex', 'copy']);
   grunt.registerTask('deploy', 'Deploy to Github Pages', ['dist', 'buildcontrol']);
