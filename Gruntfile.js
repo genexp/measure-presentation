@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: ['slides/**', 'bower_components/**', 'js/**', 'css/*.css'],
+            src: ['slides/**', 'bower_components/**', 'js/**', 'img/**', 'css/*.css'],
             dest: 'dist/'
           }, {
             expand: true,
