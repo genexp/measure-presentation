@@ -1,0 +1,69 @@
+[
+    {
+        "filename": "title-slide.html",
+        "attr": {}
+    },
+    {
+      "filename": "goals.html",
+      "attr": {}
+    },
+    {
+        "filename": "hero.html",
+        "attr": {
+            "data-background": "img/background.jpg"
+        }
+    },
+    {
+        "filename": "dev-life.html",
+        "attr": {}
+    },
+    {
+        "filename": "databases-then.html",
+        "attr": {}
+    },
+    {
+        "filename": "databases-now.html",
+        "attr": {}
+    },
+    {
+        "filename": "tsdb.html",
+        "attr": {}
+    },
+    {
+      "filename": "what-is-it.html",
+      "attr": {}
+    },
+    {
+      "filename": "what-can-we-measure.html",
+      "attr": {}
+    },
+    {
+      "filename": "production.html",
+      "attr": {}
+    },
+    {
+      "filename": "alternatives.html",
+      "attr": {}
+    },
+    {
+      "filename": "sql.html",
+      "attr": {}
+    },
+    {
+      "filename": "filesystem.html",
+      "attr": {}
+    },
+    {
+      "filename": "nms.html",
+      "attr": {}
+    },
+    {
+      "filename": "how-does-it-work.html",
+      "attr": {}
+    },
+    {
+      "filename": "demo.html",
+      "attr": {}
+    }
+
+]
