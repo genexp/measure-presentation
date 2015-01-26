@@ -62,8 +62,27 @@
       "attr": {}
     },
     {
+      "filename": "influxdb-title.html",
+      "attr": {}
+    },
+    {
+      "filename": "influxdb.html",
+      "attr": {}
+    },
+    {
+      "filename": "visualize.html",
+      "attr": {}
+    },
+    {
+      "filename": "data-organization.html",
+      "attr": {}
+    },
+    {
+      "filename": "libraries.html",
+      "attr": {}
+    },
+    {
       "filename": "demo.html",
       "attr": {}
     }
-
 ]
