@@ -1,0 +1,20 @@
+# list all time series
+list series
+
+# Bored People
+select mean(value) from attendee_engagement
+group by time(10m)
+where time > now() - 1d
+
+# Bored People
+select mean(value) from attendee_engagement
+group by time(30m)
+where time > now() - 1d and attendeeName = 'attendee64'
+
+# Richard
+select mean(value) from attendee_engagement
+group by time(30m)
+where time > now() - 1d and attendeeName = 'richard'
+
+# Number of data points
+select count(value) from attendee_engagement where time > now() - 1h

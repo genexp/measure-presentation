@@ -14,10 +14,10 @@ var influxdb = new InfluxDB({
   'port' :'8086',
   'username' :'root',
   'password' :'root',
-  'database' :'cpu_idle'
+  'database' :'attendee_engagement'
 });
 
-influxdb.createDatabase('cpu_idle');
+influxdb.createDatabase('attendee_engagement');
 
 ////////////////////////////////
 // Step 2 - Create CPU Points //
@@ -28,13 +28,22 @@ var startTime = new Date() - backMilliseconds;
 var timeInterval = 60 * 1000;
 var i;
 
-var cpuPoints = [];
+var attendeeEngagement = [];
 for (i = 0; i < backMilliseconds; i += timeInterval) {
-  cpuPoints.push({
-    'name':    'cpu_idle',
+  attendeeEngagement.push({
+    'name':    'attendee_engagement',
     'time': startTime + i,
     'value' : Math.random() * 100,
-    'hostName': 'server' + Math.floor(Math.random() * 100)
+    'attendeeName': 'attendee' + Math.floor(Math.random() * 100)
+  });
+}
+
+for (i = 0; i < backMilliseconds; i += timeInterval) {
+  attendeeEngagement.push({
+    'name':    'attendee_engagement',
+    'time': startTime + i,
+    'value' : Math.random() * 5 + 95,
+    'attendeeName': 'richard'
   });
 }
 
@@ -42,4 +51,4 @@ for (i = 0; i < backMilliseconds; i += timeInterval) {
 // Step 3 - Write the Data //
 /////////////////////////////
 
-influxdb.writePoints('cpu_idle', cpuPoints);
+influxdb.writePoints('attendee_engagement', attendeeEngagement);

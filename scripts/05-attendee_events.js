@@ -14,10 +14,10 @@ var influxdb = new InfluxDB({
   'port' :'8086',
   'username' :'root',
   'password' :'root',
-  'database' :'customer_events'
+  'database' :'attendee_events'
 });
 
-influxdb.createDatabase('customer_events');
+influxdb.createDatabase('attendee_events');
 
 /////////////////////////////////////
 // Step 2 - Create Customer Events //
@@ -26,16 +26,16 @@ influxdb.createDatabase('customer_events');
 var backMilliseconds = 1 * 86000 * 1000;
 var startTime = new Date() - backMilliseconds;
 var timeInterval = 60 * 1000;
-var eventTypes = ['click', 'view', 'post', 'comment'];
+var eventTypes = ['check_phone', 'take_nap', 'raise_eyebrow', 'drink_coffee'];
 var i, j;
 
-var customerEvents = [];
+var attendeeEvents = [];
 for (i = 0; i < backMilliseconds; i += timeInterval) {
   for (j = 0; j < Math.random() * 10; j += 1) {
-    customerEvents.push({
+    attendeeEvents.push({
       'name':'customer_events',
       'time':startTime + i,
-      'customerId': Math.floor(Math.random() * 1000),
+      'attendeeId': Math.floor(Math.random() * 1000),
       'type': eventTypes[Math.floor(Math.random() * 1000 % 4)]
     });
   }
@@ -44,4 +44,4 @@ for (i = 0; i < backMilliseconds; i += timeInterval) {
 // Step 3 - Write The Data //
 /////////////////////////////
 
-influxdb.writePoints('customer_events', customerEvents);
+influxdb.writePoints('attendee_events', attendeeEvents);
