@@ -66,7 +66,7 @@
       "attr": {}
     },
     {
-      "filename": "influxdb.html",
+      "filename": "features.html",
       "attr": {}
     },
     {
@@ -82,7 +82,21 @@
       "attr": {}
     },
     {
+      "filename": "protocols.html",
+      "attr": {}
+    },
+    {
       "filename": "demo.html",
       "attr": {}
+    },
+    {
+      "filename": "summary.html",
+      "attr": {}
+    },
+    {
+      "filename": "hero.html",
+      "attr": {
+        "data-background": "img/background.jpg"
+      }
     }
 ]
