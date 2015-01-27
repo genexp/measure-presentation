@@ -1,0 +1,15 @@
+<h2>How does it scale?</h2>
+<ul>
+  <li>Databases -> Shard Spaces -> Shards</li>
+  <li>Storage options: LevelDB RocksDB, HyperLevelDBm, LMDB</li>
+</ul>
+
+<aside class="notes">
+  <ul>
+    <li>Each shard is its own database</li>
+    <li>Log Structured Merge Tree</li>
+    <li>B+ Tree</li>
+    <li>Shards can be replicated to multiple servers</li>
+    <li>Multiple shards for a period of time, prevents write hot spots</li>
+  </ul>
+</aside>
